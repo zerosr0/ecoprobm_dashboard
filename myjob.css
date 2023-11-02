@@ -30,42 +30,67 @@ table {
 /* 변수 */
 .container {
   position: relative;
+  /* To 개발팀 : iframe이나 form에 넣으실 때 
+  아래 margin-top속성 제거 해 주세요.*/
+  margin-top: 80px;
 }
-.container .main-2f {
-  height: 50%;
+.container .form-wrap .ui-tabs-nav {
+  height: 40px;
+  border-radius: 5px 5px 0 0;
+}
+.container .form-wrap .ui-tabs-nav .ui-sortable-handle {
+  background-color: #004098;
+}
+.container .form-wrap form .main-2f {
+  height: calc(50% - 40px);
   display: flex;
 }
-.container .main-2f section {
+.container .form-wrap form .main-2f section {
   position: relative;
-  width: 24%;
+  width: 25%;
+  padding: 20px 10px 20px 20px;
+  border-right: 1px solid #eee;
 }
-.container .main-2f section:last-child {
-  margin-right: 0;
-}
-.container .main-2f section .section-title {
+.container .form-wrap form .main-2f section .section-title {
   margin-bottom: 15px;
 }
-.container .main-1f {
-  height: 50%;
+.container .form-wrap form .main-1f {
+  height: calc(50% - 40px);
+  padding-bottom: 30px;
+  display: flex;
+}
+.container .form-wrap form .main-1f section {
+  position: relative;
+  width: 50%;
+  padding: 0 20px;
+}
+.container .form-wrap form .main-1f section:last-child {
+  margin-right: 0;
+}
+.container .form-wrap form .main-1f section .section-title {
+  margin-bottom: 15px;
 }
 
-.board .section-title .more-btn {
+.incompleted-sec {
+  border-top: 2px solid #00367a;
+}
+.incompleted-sec .section-title .more-btn {
   position: absolute;
   right: 10px;
   width: 50px;
-  height: 25px;
+  height: 22px;
   color: #fff;
   background-color: #495464;
   border-radius: 12px;
-  font: 0.9em/22px "roboto";
+  font: 0.9em/18px "roboto";
   text-align: center;
 }
-.board .wrapper table {
+.incompleted-sec .wrapper table {
   width: 100%;
   height: 100%;
   table-layout: fixed;
 }
-.board .wrapper table tbody {
+.incompleted-sec .wrapper table tbody {
   width: 100%;
   height: 100%;
   display: flex;
@@ -73,31 +98,32 @@ table {
   align-items: center;
   justify-content: space-around;
 }
-.board .wrapper table tbody tr {
+.incompleted-sec .wrapper table tbody tr {
   display: flex;
-  flex: 1;
   align-items: center;
-  width: 95%;
+  width: 100%;
+  height: 50px;
   border-bottom: 1px solid #a9adb8;
+  font-size: 0.9em;
 }
-.board .wrapper table tbody tr:last-of-type {
+.incompleted-sec .wrapper table tbody tr:last-of-type {
   margin-bottom: 10px;
 }
-.board .wrapper table tbody tr:hover {
+.incompleted-sec .wrapper table tbody tr:hover {
   background-color: #f2f3f6;
 }
-.board .wrapper table tbody tr td {
+.incompleted-sec .wrapper table tbody tr td {
   display: flex;
   flex-direction: column;
 }
-.board .wrapper table tbody tr .issue-title {
+.incompleted-sec .wrapper table tbody tr .issue-title {
   width: 68%;
   padding-left: 5px;
 }
-.board .wrapper table tbody tr .issue-title .issue-type {
+.incompleted-sec .wrapper table tbody tr .issue-title .issue-type {
   color: #2aab7d;
 }
-.board .wrapper table tbody tr .issue-title .detail-title {
+.incompleted-sec .wrapper table tbody tr .issue-title .detail-title {
   color: #000;
   display: block;
   width: 100%;
@@ -105,15 +131,15 @@ table {
   overflow: hidden;
   white-space: nowrap;
 }
-.board .wrapper table tbody tr .processing-status {
+.incompleted-sec .wrapper table tbody tr .processing-status {
   width: 32%;
   text-align: right;
   padding-right: 5px;
 }
-.board .wrapper table tbody tr .processing-status .current-status {
+.incompleted-sec .wrapper table tbody tr .processing-status .current-status {
   color: #e07351;
 }
-.board .wrapper table tbody tr .processing-status a {
+.incompleted-sec .wrapper table tbody tr .processing-status a {
   color: #000;
 }
 
@@ -158,16 +184,15 @@ table {
   position: absolute;
   right: 10px;
   width: 50px;
-  height: 25px;
+  height: 22px;
   color: #fff;
   background-color: #495464;
   border-radius: 12px;
-  font: 0.9em/22px "roboto";
+  font: 0.9em/18px "roboto";
   text-align: center;
 }
 .notice .notice-wrapper {
   height: 200px;
-  padding: 10px;
 }
 .notice .notice-wrapper table {
   width: 100%;
@@ -180,11 +205,13 @@ table {
   height: 100%;
 }
 .notice .notice-wrapper table tbody tr {
-  width: 95%;
+  width: 100%;
+  height: 50px;
   flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  font-size: 0.9em;
   border-bottom: 1px solid #666666;
   padding: 0 5px 5px 5px;
 }
@@ -201,6 +228,133 @@ table {
   width: 15px;
   margin-right: 5px;
   fill: #fb0808;
+}
+
+.current-quan {
+  position: relative;
+}
+.current-quan::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 500px;
+  left: 1px;
+}
+.current-quan .section-title .more-btn {
+  position: absolute;
+  right: 10px;
+  width: 50px;
+  height: 22px;
+  color: #fff;
+  background-color: #495464;
+  border-radius: 12px;
+  font: 0.9em/18px "roboto";
+  text-align: center;
+}
+.current-quan .current-quan-tab {
+  position: relative;
+}
+.current-quan .current-quan-tab .current-quan-list {
+  overflow: hidden;
+}
+.current-quan .current-quan-tab .current-quan-list li {
+  float: left;
+  width: 120px;
+  height: 30px;
+}
+.current-quan .current-quan-tab .current-quan-list li .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  height: 100%;
+  color: #999;
+  background-color: #f2f2f2;
+}
+.current-quan .current-quan-tab .current-quan-list li.is-on .btn {
+  background-color: #7eb59c;
+  font-weight: bold;
+  color: #fff;
+}
+.current-quan .current-quan-tab .current-quan-list-cont-wrap::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 300px;
+  left: 0;
+}
+.current-quan .current-quan-tab .current-quan-list-cont-wrap .cont {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  height: 40vh;
+  border: 1px solid #7eb59c;
+}
+.current-quan .current-quan-tab .current-quan-list-cont-wrap .cont img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.current-quan .current-quan-tab .current-quan-list-cont-wrap .cont.is-on {
+  display: block;
+}
+
+/*
+.current-quan-tab{position:relative;}
+  .current-quan-tab .current-quan-list{overflow:hidden;}
+  .current-quan-tab .current-quan-list li{float:left; margin-right:14px;}
+  .current-quan-tab .current-quan-list li.is_on .btn{font-weight:bold; color:green;}
+  .current-quan-tab .current-quan-list .btn{font-size:13px;}
+  .current-quan-tab .current-quan-list-cont-wrap .current-quan-list-cont{position:absolute; top:25px; left:0; background:#555; color:#fff; text-align:center; width:250px; height:100px; line-height:100px;}
+*/
+.dashboard .wrapper {
+  width: 100%;
+  height: 40vh;
+}
+.dashboard .wrapper .dashboard-menu-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #eb6100;
+}
+.dashboard .wrapper .dashboard-menu-wrap .dashboard-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  height: 135px;
+  border-radius: 7px;
+  border: 1px solid #7eb59c;
+}
+.dashboard .wrapper .dashboard-menu-wrap .dashboard-menu p {
+  color: #7eb59c;
+  font-size: 1.3em;
+}
+.dashboard .wrapper .dashboard-menu-wrap .dashboard-menu span::before {
+  content: url(./image/4m변경.svg);
+  fill: #7eb59c;
+}
+.dashboard .wrapper .quick-menu-wrap {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 2%;
+}
+.dashboard .wrapper .quick-menu-wrap .quick-menu {
+  width: 19%;
+  margin-right: 1%;
+  border: 1px solid #5c5a59;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=myjob.css.map */

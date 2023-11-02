@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="myjob.css">
+  <script defer src="./js/main.js"></script>
   <title>::: 에코프로비엠 포털 :::</title>
 </head>
 
@@ -26,7 +27,7 @@
       </ul>
       <form>
         <article class="main-2f">
-          <section class="board">
+          <section class="incompleted-sec">
             <p class="section-title"><img src="image/title_icon.png" alt="">
               <span>미처리문서</span>
               <a href="#" class="more-btn">more</a>
@@ -141,6 +142,10 @@
                     <td></td>
                     <td></td>
                   </tr>
+                  <tr onclick="location.href='#'">
+                    <td></td>
+                    <td></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -160,18 +165,94 @@
               <span>품질현황</span>
               <a href="#" class="more-btn">more</a>
             </p>
+            <div class="current-quan-tab">
+              <ul class="current-quan-list">
+                <li class="is-on">
+                  <a href="1" class="btn">고객</a>
+                </li>
+                <li>
+                  <a href="2" class="btn">부적합</a>
+                </li>
+                <li>
+                  <a href="3" class="btn">부적합/유형별</a>
+                </li>
+                <li>
+                  <a href="4" class="btn">시정조치</a>
+                </li>
+                <li>
+                  <a href="5" class="btn">특성평가</a>
+                </li>
+              </ul>
+
+              <div class="current-quan-list-cont-wrap">
+                <div id="tab1" class="cont is-on">
+                  <img src="./image/current-quan-graph.png" alt="">
+                </div>
+                <div id="tab2" class="cont">
+                  Tab Content2
+                </div>
+                <div id="tab3" class="cont">
+                  Tab Content3
+                </div>
+                <div id="tab4" class="cont">
+                  Tab Content4
+                </div>
+                <div id="tab5" class="cont">
+                  Tab Content5
+                </div>
+              </div>
+            </div>
           </section>
           <section class="dashboard">
             <p class="section-title"><img src="image/title_icon.png" alt="">
               <span>품질대시보드(월간실적)</span>
             </p>
             <div class="wrapper">
-              <div class="dashboard-icon-wrap">
-                <a href="">
-                  <span></span>
-                  <img src="" alt="">
-                  <b>0</b>건
+              <div class="dashboard-menu-wrap">
+                <a href="" class="dashboard-menu">
+                  <p>설계 변경</p>
+                  <span><b class="quan-dashboard-num">0</b>건</span>
                 </a>
+                <a href="" class="dashboard-menu">
+                  <p>설계 변경</p>
+                  <span><b class="quan-dashboard-num">0</b>건</span>
+                </a>
+                <a href="" class="dashboard-menu">
+                  <p>설계 변경</p>
+                  <span><b class="quan-dashboard-num">0</b>건</span>
+                </a>
+                <a href="" class="dashboard-menu">
+                  <p>설계 변경</p>
+                  <span><b class="quan-dashboard-num">0</b>건</span>
+                </a>
+                <a href="" class="dashboard-menu">
+                  <p>설계 변경</p>
+                  <span><b class="quan-dashboard-num">0</b>건</span>
+                </a>
+                <a href="" class="dashboard-menu">
+                  <p>설계 변경</p>
+                  <span><b class="quan-dashboard-num">0</b>건</span>
+                </a>
+                <a href="" class="dashboard-menu">
+                  <p>설계 변경</p>
+                  <span><b class="quan-dashboard-num">0</b>건</span>
+                </a>
+                <a href="" class="dashboard-menu">
+                  <p>설계 변경</p>
+                  <span><b class="quan-dashboard-num">0</b>건</span>
+                </a>
+              </div>
+              <div class="quick-menu-wrap">
+                <a href="" class="quick-menu">
+                  <img src="" alt="">QMS매뉴얼</a>
+                <a href="" class="quick-menu">
+                  <img src="" alt="">장애처리게시판</a>
+                <a href="" class="quick-menu">
+                  <img src="" alt="">Q&A게시판</a>
+                <a href="" class="quick-menu">
+                  <img src="" alt="">회의록/품질회의</a>
+                <a href="" class="quick-menu">
+                  <img src="" alt="">공식홈페이지</a>
               </div>
             </div>
           </section>
@@ -179,6 +260,16 @@
       </form>
     </div>
   </div>
+  <script>
+    async function fetchHtmlAsText(url) {
+      return await (await fetch(url)).text();
+    }
+
+    async function importPage(target) {
+      document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+    }
+    importPage('topmenu');
+  </script>
 </body>
 
 </html>
