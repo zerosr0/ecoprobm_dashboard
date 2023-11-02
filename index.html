@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="myjob.css">
+  <title>::: 에코프로비엠 포털 :::</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-wrap">
+      <ul role="tablist"
+        class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header ui-sortable">
+        <li id="0" onclick="removeAllTabs()" style="min-width:10px;width:40px;" class="ui-sortable-handle">
+          <button type="button"></button>
+        </li>
+        <li id="1"
+          class="ui-tabs-tab ui-state-default ui-tab ui-corner-top ui-sortable-handle ui-tabs-active ui-state-active active"
+          onclick="tabClick(1)" role="tab" tabindex="0" aria-controls="tab-1" aria-labelledby="ui-id-1"
+          aria-selected="true" aria-expanded="true">
+          <a href="#tab-1" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1">메인화면</a>
+          <button type="button"></button>
+        </li>
+      </ul>
+      <form>
+        <article class="main-2f">
+          <section class="board">
+            <p class="section-title"><img src="image/title_icon.png" alt="">
+              <span>미처리문서</span>
+              <a href="#" class="more-btn">more</a>
+            </p>
+            <div class="wrapper">
+              <table>
+                <caption class="hidden">미처리문서</caption>
+                <tbody>
+                  <tr>
+                    <td class="issue-title">
+                      <span class="issue-type">기술표준</span>
+                      <a href="#" class="detail-title">기술표준제목</a>
+                    </td>
+                    <td class="processing-status">
+                      <span class="current-status">문제점승인</span>
+                      <a href="#">23.07.05 운영자</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="issue-title">
+                      <span class="issue-type">오픈이슈</span>
+                      <a href="#" class="detail-title">이슈제목</a>
+                    </td>
+                    <td class="processing-status">
+                      <span class="current-status">문제점승인</span>
+                      <a href="#">23.07.04 운영자</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="issue-title">
+                      <span class="issue-type">개발품질</span>
+                      <a href="#" class="detail-title">[테스트 프로젝트_8] 문서 설계 사항 검토</a>
+                    </td>
+                    <td class="processing-status">
+                      <span class="current-status">실적문서승인</span>
+                      <a href="#">23.07.03 운영자</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="issue-title">
+                      <span class="issue-type">오픈이슈</span>
+                      <a href="#" class="detail-title">[테스트 프로젝트_7] 문서 설계 사항 검토</a>
+                    </td>
+                    <td class="processing-status">
+                      <span class="current-status">처리결과확인</span>
+                      <a href="#">23.07.03 운영자</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="issue-title">
+                      <span class="issue-type">개발품질</span>
+                      <a href="#" class="detail-title">[테스트 프로젝트_6] 문서 설계 사항 검토 동해물과 백두산이 마르고 닳도록</a>
+                    </td>
+                    <td class="processing-status">
+                      <span class="current-status">실적문서승인</span>
+                      <a href="#">23.07.03 운영자</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="unpro-doc">
+            <p class="section-title"><img src="image/title_icon.png" alt="">
+              <span>업무별 미처리문서</span>
+            </p>
+            <div class="unpro-doc-btn-wrap">
+              <a class="unpro-doc-btn" href=""><span>검사관리</span>146</a>
+              <a class="unpro-doc-btn" href=""><span>고객품질</span>146</a>
+              <a class="unpro-doc-btn" href=""><span>과거품질</span>18</a>
+              <a class="unpro-doc-btn" href=""><span>개선관리</span>108</a>
+              <a class="unpro-doc-btn" href=""><span>심사관리</span>54</a>
+              <a class="unpro-doc-btn" href=""><span>변경관리</span>132</a>
+              <a class="unpro-doc-btn" href=""><span>표준관리</span>16</a>
+              <a class="unpro-doc-btn" href=""><span>계측기관리</span>5</a>
+              <a class="unpro-doc-btn" href=""><span>특성평가</span>26</a>
+              <a class="unpro-doc-btn" href=""><span>Q-Cost</span>14</a>
+              <a class="unpro-doc-btn" href=""><span>과거차품질</span>84</a>
+              <a class="unpro-doc-btn" href=""><span>정기검사</span>6</a>
+              <a class="unpro-doc-btn" href=""><span>자격<br>인증관리</span>835</a>
+              <a class="unpro-doc-btn" href=""><span>고객품질</span>835</a>
+            </div>
+          </section>
+          <section class="notice">
+            <p class="section-title"><img src="image/title_icon.png" alt="">
+              <span>공지사항</span>
+              <a href="#" class="more-btn">more</a>
+            </p>
+            <div class="notice-wrapper">
+              <table>
+                <caption class="hidden">공지사항</caption>
+                <tbody>
+                  <tr onclick="location.href='#'">
+                    <td class="import-notice"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 384 512">
+                        <path
+                          d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
+                      </svg>공지사항 테스트
+                    </td>
+                    <td>2023-11-17</td>
+                  </tr>
+                  <tr onclick="location.href='#'">
+                    <td>GQMS 추진경과보고</td>
+                    <td>2023-11-14</td>
+
+                  </tr>
+                  <tr onclick="location.href='#'">
+                    <td>QMS에 파일 첨부가 안되는 경우 해결 방법</td>
+                    <td>2023-11-13</td>
+                  </tr>
+                  <tr onclick="location.href='#'">
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="ecm-graph">
+            <p class="section-title"><img src="./image/title_icon.png" alt="">
+              <span>ECM 승인율 DROP율</span>
+            </p>
+            <div class="graph-wrap">
+              <img src="./image/ecm-graph.png" alt="">
+            </div>
+          </section>
+        </article>
+        <article class="main-1f">
+          <section class="current-quan">
+            <p class="section-title"><img src="image/title_icon.png" alt="">
+              <span>품질현황</span>
+              <a href="#" class="more-btn">more</a>
+            </p>
+          </section>
+          <section class="dashboard">
+            <p class="section-title"><img src="image/title_icon.png" alt="">
+              <span>품질대시보드(월간실적)</span>
+            </p>
+            <div class="wrapper">
+              <div class="dashboard-icon-wrap">
+                <a href="">
+                  <span></span>
+                  <img src="" alt="">
+                  <b>0</b>건
+                </a>
+              </div>
+            </div>
+          </section>
+        </article>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
