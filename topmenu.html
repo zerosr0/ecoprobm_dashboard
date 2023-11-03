@@ -4,225 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
 </head>
 
 <body>
   <header id="topmenu">
     <div class="header-container">
-      <h1 class="logo-img"><img src="image/logo.jpg" alt="logo image"></h1>
+      <h1 class="logo-img"><img src="./image/logo.png" alt="logo image"></h1>
       <div class="header-2f">
-        <div class="search">
-          <input type="search" placeholder="검색어를 입력하세요" name="" id="">
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="quick-myjob">
+          <span>MYJOB</span>
+          <a href="" id="incompleted" class="incompleted">Incompleted<label for="incompleted">6368</label></a>
+          <a href="" id="refer" class="refer">&nbsp;/&nbsp;Refer<label for="refer">474</label></a>
         </div>
         <div class="gnb-wrap">
           <div class="admin">
             <p>[정보기술팀] <span>운영자dev님 환영합니다!</span></p>
           </div>
-          <div id="gnb">
-            <ul class="sub-menu0">
-              <li><a href="#">관리자</a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">기본정보관리 <i class="fa-solid fa-chevron-right"></i></a>
-                      <div class="sub-menu2">
-                        <ul>
-                          <li><a href="#">고객사관리</a></li>
-                          <li><a href="#">사용자관리</a></li>
-                          <li><a href="#">회사정보관리</a></li>
-                          <li><a href="#">공장달력</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li><a href="#">코드정보관리<i class="fa-solid fa-chevron-right"></i></a>
-                      <div class="sub-menu2">
-                        <ul>
-                          <li><a href="#">부서코드관리</a></li>
-                          <li><a href="#">결함코드관리</a></li>
-                          <li><a href="#">품번관리</a></li>
-                          <li><a href="#">공통코드관리</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li><a href="#">현황관리<i class="fa-solid fa-chevron-right"></i></a>
-                      <div class="sub-menu2">
-                        <ul>
-                          <li><a href="#">MYJOB-전체문서현황</a></li>
-                          <li><a href="#">MYJOB-참조문서현황</a></li>
-                          <li><a href="#">MYJOB-담당자변경현황</a></li>
-                          <li><a href="#">MYJOB-미처리문서현황</a></li>
-                          <li><a href="#">게시물조회관리</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li><a href="#">로그관리<i class="fa-solid fa-chevron-right"></i></a>
-                      <div class="sub-menu2">
-                        <ul>
-                          <li><a href="#">접속로그현황</a></li>
-                          <li><a href="#">다운로드로그-엑셀</a></li>
-                          <li><a href="#">다운로드로그-파일</a></li>
-                          <li><a href="#">부서별사용현황</a></li>
-                          <li><a href="#">데이터삭제로그현황</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li><a href="#">품질이슈<i class="fa-solid fa-chevron-right"></i></a>
-                      <div class="sub-menu2">
-                        <ul>
-                          <li><a href="#">품질이슈 메일링 수신자</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="#">회의록</a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">회의록현황</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="#">게시판</a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">협력사게시판</a></li>
-                    <li><a href="#">메뉴얼</a></li>
-                    <li><a href="#">장애처리게시판</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="#">기본정보</a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">내정보현황</a></li>
-                    <li><a href="#">내결재선/담당/참조</a></li>
-                    <li><a href="#">즐겨찾기현황</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="#">메뉴관리</a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">네비게이션 관리</a></li>
-                    <li><a href="#">권한그룹 관리</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="#">로그아웃</a></li>
-            </ul>
-          </div>
-          <div id="gnb-mobile">
-            <ul class="sub-menu0">
-              <li>
-                <a href="#"><i class="fas fa-user-tie"></i></a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">기본정보관리<i class="fa-solid fa-plus"></i></a>
-                    </li>
-                    <div class="sub-menu2">
-                      <ul>
-                        <li><a href="#">고객사관리</a></li>
-                        <li><a href="#">고객사관리 FAR</a></li>
-                        <li><a href="#">사용자관리</a></li>
-                        <li><a href="#">회사정보관리</a></li>
-                        <li><a href="#">Product Group 관리</a></li>
-                        <li><a href="#">사이트코드관리</a></li>
-                        <li><a href="#">P-SCAN 참조자관리</a></li>
-                      </ul>
-                    </div>
-                    <li><a href="#">제품정보관리<i class="fa-solid fa-plus"></i></a>
-                    </li>
-                    <div class="sub-menu2">
-                      <ul>
-                        <li><a href="#">기초코드현황</a></li>
-                      </ul>
-                    </div>
-                    <li><a href="#">코드정보관리<i class="fa-solid fa-plus"></i></i></a>
-                    </li>
-                    <div class="sub-menu2">
-                      <ul>
-                        <li><a href="#">부서코드관리</a></li>
-                        <li><a href="#">결함코드관리</a></li>
-                        <li><a href="#">공통코드관리</a></li>
-                      </ul>
-                    </div>
-                    <li><a href="#">현황관리<i class="fa-solid fa-plus"></i></a>
-                    </li>
-                    <div class="sub-menu2">
-                      <ul>
-                        <li><a href="#">MYJOB-전체문서현황</a></li>
-                        <li><a href="#">MYJOB-참조문서현황</a></li>
-                        <li><a href="#">MYJOB-담당자변경현황</a></li>
-                        <li><a href="#">MYJOB-미처리문서현황</a></li>
-                        <li><a href="#">게시물조회관리</a></li>
-                      </ul>
-                    </div>
-                    <li><a href="#">로그관리<i class="fa-solid fa-plus"></i></a>
-                    </li>
-                    <div class="sub-menu2">
-                      <ul>
-                        <li><a href="#">접속로그현황</a></li>
-                        <li><a href="#">다운로드로그-엑셀</a></li>
-                        <li><a href="#">다운로드로그-파일</a></li>
-                        <li><a href="#">부서별사용현황</a></li>
-                      </ul>
-                    </div>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chalkboard"></i></a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">사내게시판</a></li>
-                    <li><a href="#">협력사게시판</a></li>
-                    <li><a href="#">장애처리게시판</a></li>
-                    <li><a href="#">용어집</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">내정보현황</a></li>
-                    <li><a href="#">내결재선/담당/참조</a></li>
-                    <li><a href="#">즐겨찾기현황</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-elementor"></i></a>
-                <div class="sub-menu1">
-                  <ul>
-                    <li><a href="#">네이게이션 관리</a></li>
-                    <li><a href="#">권한그룹 관리</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i></a></li>
-            </ul>
-
-          </div>
+          <a href="#" class="logout">LOGOUT</a>
         </div>
       </div>
       <div class="header-1f">
         <div class="main-gnb">
           <ul>
-            <li><a href="#"><span>My Job</span></a></li>
-            <li><a href="#"><span>개발의뢰</span></a></li>
-            <li><a href="#"><span>개발품질</span></a></li>
-            <li><a href="#"><span>오픈이슈</span></a></li>
+            <li><a href="#"><span>MY JOB</span></a></li>
+            <li><a href="#"><span>원료품질</span></a></li>
+            <li><a href="#"><span>정기검사관리</span></a></li>
+            <li><a href="#"><span>고객품질</span></a></li>
             <li><a href="#"><span>과거품질</span></a></li>
-            <li><a href="#"><span>변경관리</span></a></li>
+            <li><a href="#"><span>개선관리</span></a></li>
             <li><a href="#"><span>심사관리</span></a></li>
-            <li><a href="#"><span>개발표준관리</span></a></li>
+            <li><a href="#"><span>변경관리</span></a></li>
+            <li><a href="#"><span>표준관리</span></a></li>
+            <li><a href="#"><span>계측기관리</span></a></li>
+            <li><a href="#"><span>특성평가</span></a></li>
+            <li><a href="#"><span>회의</span></a></li>
+            <li><a href="#"><span>분석리포트</span></a></li>
+            <li><a href="#"><span>소모품관리</span></a></li>
+            <li><a href="#"><span>협력사품질</span></a></li>
+            <li><a href="#"><span>Communication</span></a></li>
+            <li><a href="#"><span>관리자</span></a></li>
+            <li><a href="#"><span>기본정보</span></a></li>
+            <li><a href="#"><span>메뉴관리</span></a></li>
           </ul>
         </div>
+        <ul class="gnb-btn">
+          <li><img src="./image/arrow_left.png" alt="arrow left icon"></li>
+          <li><img src="./image/arrow_right.png" alt="arrow right icon"></li>
+        </ul>
       </div>
     </div>
   </header>

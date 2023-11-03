@@ -4,25 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="myjob.css">
+  <link rel="stylesheet" href="./css/myjob.css">
+  <link rel="stylesheet" href="./css/topmenu.css">
   <script defer src="./js/main.js"></script>
+  <script src="./js/import.js"></script>
   <title>::: 에코프로비엠 포털 :::</title>
+
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./js/import.js"></script>
 </head>
 
 <body>
+  <header id='header'></header>
   <div class="container">
     <div class="form-wrap">
       <ul role="tablist"
         class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header ui-sortable">
-        <li id="0" onclick="removeAllTabs()" style="min-width:10px;width:40px;" class="ui-sortable-handle">
-          <button type="button"></button>
+        <li id="0" onclick="removeAllTabs()" class="ui-sortable-handle">
+          <button type="button"><img src="./image/delete.png" alt=""></button>
         </li>
         <li id="1"
           class="ui-tabs-tab ui-state-default ui-tab ui-corner-top ui-sortable-handle ui-tabs-active ui-state-active active"
           onclick="tabClick(1)" role="tab" tabindex="0" aria-controls="tab-1" aria-labelledby="ui-id-1"
           aria-selected="true" aria-expanded="true">
           <a href="#tab-1" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1">메인화면</a>
-          <button type="button"></button>
+          <button type="button"><img src="./image/delete.png" alt=""></button>
         </li>
       </ul>
       <form>
@@ -260,16 +267,6 @@
       </form>
     </div>
   </div>
-  <script>
-    async function fetchHtmlAsText(url) {
-      return await (await fetch(url)).text();
-    }
-
-    async function importPage(target) {
-      document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
-    }
-    importPage('topmenu');
-  </script>
 </body>
 
 </html>

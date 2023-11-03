@@ -5,6 +5,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Nanum Gothic", "나눔고딕", sans-serif;
+	letter-spacing: -1px;
+	font-weight: normal;
 }
 ul,
 ol,
@@ -27,6 +30,7 @@ table {
 $color-green: #7eb59c;
 $color-bg02: #f2f2f2;
 $color-gray01: #ccc;
+$color-gray02: #ddd;
 $color-gray03: #eee;
 $color-navy: #00367a;
 $color-black01: #5c5a59;
@@ -51,14 +55,24 @@ $color-logo-orange: #eb6100;
 .container {
 	position: relative;
 	/* To 개발팀 : iframe이나 form에 넣으실 때 
-	아래 margin-top속성 제거 해 주세요.*/
-	margin-top: 80px;
+	아래 padding-top: 100px;속성 제거 해 주세요.*/
+	padding-top: 100px;
 	.form-wrap {
+		margin-top: 10px;
 		.ui-tabs-nav {
-			height: 40px;
-			border-radius: 5px 5px 0 0;
+			display: flex;
+			height: 30px;
 			.ui-sortable-handle {
+				border-radius: 5px 5px 0 0;
 				background-color: $color-logo-dark-blue;
+				.ui-tabs-anchor {
+					color: #fff;
+				}
+				button {
+					width: 30px;
+					background-color: transparent;
+					border: none;
+				}
 			}
 		}
 		form {
@@ -82,7 +96,7 @@ $color-logo-orange: #eb6100;
 				section {
 					position: relative;
 					width: 50%;
-					padding: 0 20px;
+					padding: 20px 10px 20px 20px;
 					&:last-child {
 						margin-right: 0;
 					}
@@ -118,7 +132,7 @@ $color-logo-orange: #eb6100;
 					align-items: center;
 					width: 100%;
 					height: 50px;
-					border-bottom: 1px solid #a9adb8;
+					border-bottom: 1px solid $color-gray02;
 					font-size: 0.9em;
 					&:last-of-type {
 						margin-bottom: 10px;
@@ -162,6 +176,7 @@ $color-logo-orange: #eb6100;
 	}
 }
 .unpro-doc {
+	border-top: 2px solid $color-logo-orange;
 	.unpro-doc-btn-wrap {
 		display: flex;
 		flex-wrap: wrap;
@@ -204,16 +219,18 @@ $color-logo-orange: #eb6100;
 	}
 }
 .notice {
+	border-top: 2px solid $color-green;
 	.section-title {
 		.more-btn {
 			@include more-btn();
 		}
 	}
 	.notice-wrapper {
-		height: 200px;
+		height: 100%;
 		table {
 			width: 100%;
 			height: 100%;
+			table-layout: fixed;
 			tbody {
 				display: flex;
 				flex-direction: column;
@@ -222,12 +239,11 @@ $color-logo-orange: #eb6100;
 				tr {
 					width: 100%;
 					height: 50px;
-					flex: 1;
 					display: flex;
 					justify-content: space-between;
 					align-items: flex-end;
 					font-size: 0.9em;
-					border-bottom: 1px solid #666666;
+					border-bottom: 1px solid $color-gray02;
 					padding: 0 5px 5px 5px;
 					&:hover {
 						background-color: #f4f4f4;
@@ -248,8 +264,12 @@ $color-logo-orange: #eb6100;
 		}
 	}
 }
+.ecm-graph {
+	border-top: 2px solid $color-black01;
+}
 .current-quan {
 	position: relative;
+	border-top: 2px solid $color-navy;
 	&::after {
 		display: block;
 		content: "";
@@ -303,12 +323,12 @@ $color-logo-orange: #eb6100;
 				left: 0;
 				text-align: center;
 				width: 100%;
-				height: 40vh;
+				height: 35vh;
 				border: 1px solid $color-green;
 				img {
 					width: 100%;
 					height: 100%;
-					object-fit: cover;
+					object-fit: contain;
 				}
 				&.is-on {
 					display: block;
@@ -327,9 +347,10 @@ $color-logo-orange: #eb6100;
   .current-quan-tab .current-quan-list-cont-wrap .current-quan-list-cont{position:absolute; top:25px; left:0; background:#555; color:#fff; text-align:center; width:250px; height:100px; line-height:100px;}
 */
 .dashboard {
+	border-top: 2px solid $color-navy;
 	.wrapper {
 		width: 100%;
-		height: 40vh;
+		height: 35vh;
 		.dashboard-menu-wrap {
 			width: 100%;
 			display: flex;
@@ -343,7 +364,7 @@ $color-logo-orange: #eb6100;
 				width: 23%;
 				margin-right: 2%;
 				margin-bottom: 2%;
-				height: 135px;
+				height: 118px;
 				border-radius: 7px;
 				border: 1px solid $color-green;
 				p {
@@ -360,7 +381,7 @@ $color-logo-orange: #eb6100;
 		}
 		.quick-menu-wrap {
 			width: 100%;
-			height: 70px;
+			height: 65px;
 			display: flex;
 			flex-wrap: nowrap;
 			margin-top: 2%;

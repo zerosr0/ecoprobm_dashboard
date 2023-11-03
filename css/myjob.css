@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Nanum Gothic", "나눔고딕", sans-serif;
+  letter-spacing: -1px;
+  font-weight: normal;
 }
 
 ul,
@@ -31,15 +34,27 @@ table {
 .container {
   position: relative;
   /* To 개발팀 : iframe이나 form에 넣으실 때 
-  아래 margin-top속성 제거 해 주세요.*/
-  margin-top: 80px;
+  아래 padding-top: 100px;속성 제거 해 주세요.*/
+  padding-top: 100px;
+}
+.container .form-wrap {
+  margin-top: 10px;
 }
 .container .form-wrap .ui-tabs-nav {
-  height: 40px;
-  border-radius: 5px 5px 0 0;
+  display: flex;
+  height: 30px;
 }
 .container .form-wrap .ui-tabs-nav .ui-sortable-handle {
+  border-radius: 5px 5px 0 0;
   background-color: #004098;
+}
+.container .form-wrap .ui-tabs-nav .ui-sortable-handle .ui-tabs-anchor {
+  color: #fff;
+}
+.container .form-wrap .ui-tabs-nav .ui-sortable-handle button {
+  width: 30px;
+  background-color: transparent;
+  border: none;
 }
 .container .form-wrap form .main-2f {
   height: calc(50% - 40px);
@@ -62,7 +77,7 @@ table {
 .container .form-wrap form .main-1f section {
   position: relative;
   width: 50%;
-  padding: 0 20px;
+  padding: 20px 10px 20px 20px;
 }
 .container .form-wrap form .main-1f section:last-child {
   margin-right: 0;
@@ -103,7 +118,7 @@ table {
   align-items: center;
   width: 100%;
   height: 50px;
-  border-bottom: 1px solid #a9adb8;
+  border-bottom: 1px solid #ddd;
   font-size: 0.9em;
 }
 .incompleted-sec .wrapper table tbody tr:last-of-type {
@@ -143,6 +158,9 @@ table {
   color: #000;
 }
 
+.unpro-doc {
+  border-top: 2px solid #eb6100;
+}
 .unpro-doc .unpro-doc-btn-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -180,6 +198,9 @@ table {
   margin-bottom: 0;
 }
 
+.notice {
+  border-top: 2px solid #7eb59c;
+}
 .notice .section-title .more-btn {
   position: absolute;
   right: 10px;
@@ -192,11 +213,12 @@ table {
   text-align: center;
 }
 .notice .notice-wrapper {
-  height: 200px;
+  height: 100%;
 }
 .notice .notice-wrapper table {
   width: 100%;
   height: 100%;
+  table-layout: fixed;
 }
 .notice .notice-wrapper table tbody {
   display: flex;
@@ -207,12 +229,11 @@ table {
 .notice .notice-wrapper table tbody tr {
   width: 100%;
   height: 50px;
-  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   font-size: 0.9em;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #ddd;
   padding: 0 5px 5px 5px;
 }
 .notice .notice-wrapper table tbody tr:hover {
@@ -230,8 +251,13 @@ table {
   fill: #fb0808;
 }
 
+.ecm-graph {
+  border-top: 2px solid #5c5a59;
+}
+
 .current-quan {
   position: relative;
+  border-top: 2px solid #00367a;
 }
 .current-quan::after {
   display: block;
@@ -290,13 +316,13 @@ table {
   left: 0;
   text-align: center;
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   border: 1px solid #7eb59c;
 }
 .current-quan .current-quan-tab .current-quan-list-cont-wrap .cont img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .current-quan .current-quan-tab .current-quan-list-cont-wrap .cont.is-on {
   display: block;
@@ -310,9 +336,12 @@ table {
   .current-quan-tab .current-quan-list .btn{font-size:13px;}
   .current-quan-tab .current-quan-list-cont-wrap .current-quan-list-cont{position:absolute; top:25px; left:0; background:#555; color:#fff; text-align:center; width:250px; height:100px; line-height:100px;}
 */
+.dashboard {
+  border-top: 2px solid #00367a;
+}
 .dashboard .wrapper {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
 }
 .dashboard .wrapper .dashboard-menu-wrap {
   width: 100%;
@@ -328,7 +357,7 @@ table {
   width: 23%;
   margin-right: 2%;
   margin-bottom: 2%;
-  height: 135px;
+  height: 118px;
   border-radius: 7px;
   border: 1px solid #7eb59c;
 }
@@ -342,7 +371,7 @@ table {
 }
 .dashboard .wrapper .quick-menu-wrap {
   width: 100%;
-  height: 70px;
+  height: 65px;
   display: flex;
   flex-wrap: nowrap;
   margin-top: 2%;
