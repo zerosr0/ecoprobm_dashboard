@@ -28,6 +28,7 @@ table {
 }
 /* 변수 */
 $color-green: #7eb59c;
+$color-bg01: #fafafa;
 $color-bg02: #f2f2f2;
 $color-gray01: #ccc;
 $color-gray02: #ddd;
@@ -56,20 +57,36 @@ $color-logo-orange: #eb6100;
 	position: relative;
 	/* To 개발팀 : iframe이나 form에 넣으실 때 
 	아래 padding-top: 100px;속성 제거 해 주세요.*/
-	padding-top: 100px;
+	top: 100px;
+	left: 0;
+	z-index: 5;
+	transition: 0.5s;
+	&.active {
+		left: 220px;
+		width: calc(100% - 220px);
+		#leftmenu {
+			left: 0;
+		}
+	}
 	.form-wrap {
 		margin-top: 10px;
 		.ui-tabs-nav {
 			display: flex;
 			height: 30px;
 			.ui-sortable-handle {
+				padding: 0 5px;
 				border-radius: 5px 5px 0 0;
 				background-color: $color-logo-dark-blue;
 				.ui-tabs-anchor {
+					position: relative;
 					color: #fff;
+					font-size: 0.9em;
+					line-height: 30px;
+					top: 0;
 				}
 				button {
-					width: 30px;
+					width: 25px;
+					margin-top: 7px;
 					background-color: transparent;
 					border: none;
 				}
@@ -85,7 +102,16 @@ $color-logo-orange: #eb6100;
 					padding: 20px 10px 20px 20px;
 					border-right: 1px solid $color-gray03;
 					.section-title {
+						display: flex;
+						align-items: center;
 						margin-bottom: 15px;
+						img {
+							margin-right: 5px;
+						}
+						span {
+							font-size: 0.88em;
+							font-weight: bold;
+						}
 					}
 				}
 			}
@@ -101,7 +127,21 @@ $color-logo-orange: #eb6100;
 						margin-right: 0;
 					}
 					.section-title {
+						display: flex;
+						align-items: center;
 						margin-bottom: 15px;
+						img {
+							margin-right: 5px;
+						}
+						span {
+							font-size: 0.88em;
+							font-weight: bold;
+						}
+						.unit {
+							color: $color-green;
+							margin-left: 5px;
+							font-size: 0.8em;
+						}
 					}
 				}
 			}
@@ -148,7 +188,8 @@ $color-logo-orange: #eb6100;
 						width: 68%;
 						padding-left: 5px;
 						.issue-type {
-							color: #2aab7d;
+							color: $color-green;
+							font-weight: bold;
 						}
 						.detail-title {
 							color: #000;
@@ -194,13 +235,16 @@ $color-logo-orange: #eb6100;
 			margin-bottom: 10px;
 			color: $color-black01;
 			font-weight: bold;
+			&:last-child {
+				border: none;
+			}
 			span {
 				display: block;
 				text-align: center;
 				color: $color-green;
-				font-size: 0.78em;
+				font-size: 0.73em;
 				margin-bottom: 3px;
-				font-weight: normal;
+				font-weight: bold;
 			}
 			&:nth-of-type(even) {
 				background-color: $color-bg02;
@@ -285,11 +329,15 @@ $color-logo-orange: #eb6100;
 	.current-quan-tab {
 		position: relative;
 		.current-quan-list {
-			overflow: hidden;
 			li {
 				float: left;
 				width: 120px;
 				height: 30px;
+				border-top: 1px solid $color-gray02;
+				border-left: 1px solid $color-gray02;
+				&:last-child {
+					border-right: 1px solid $color-gray02;
+				}
 				.btn {
 					display: flex;
 					justify-content: center;
@@ -338,14 +386,6 @@ $color-logo-orange: #eb6100;
 	}
 }
 
-/*
-.current-quan-tab{position:relative;}
-  .current-quan-tab .current-quan-list{overflow:hidden;}
-  .current-quan-tab .current-quan-list li{float:left; margin-right:14px;}
-  .current-quan-tab .current-quan-list li.is_on .btn{font-weight:bold; color:green;}
-  .current-quan-tab .current-quan-list .btn{font-size:13px;}
-  .current-quan-tab .current-quan-list-cont-wrap .current-quan-list-cont{position:absolute; top:25px; left:0; background:#555; color:#fff; text-align:center; width:250px; height:100px; line-height:100px;}
-*/
 .dashboard {
 	border-top: 2px solid $color-navy;
 	.wrapper {
@@ -357,31 +397,64 @@ $color-logo-orange: #eb6100;
 			flex-wrap: wrap;
 			border-bottom: 2px solid $color-logo-orange;
 			.dashboard-menu {
+				position: relative;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				width: 23%;
-				margin-right: 2%;
+				gap: 15px;
+				width: 23.875%;
+				margin-right: 1.5%;
 				margin-bottom: 2%;
 				height: 118px;
 				border-radius: 7px;
-				border: 1px solid $color-green;
-				p {
+				border: 1px solid #d3d3d3;
+				&:nth-of-type(1) p,
+				&:nth-of-type(6) p {
 					color: $color-green;
+				}
+				&:nth-of-type(2) p,
+				&:nth-of-type(7) p {
+					color: $color-logo-orange;
+				}
+				&:nth-of-type(3) p,
+				&:nth-of-type(8) p {
+					color: #282828;
+				}
+				&:nth-of-type(4) p,
+				&:nth-of-type(5) p {
+					color: $color-logo-dark-blue;
+				}
+				&:nth-of-type(4n) {
+					margin-right: 0;
+				}
+				p {
+					position: relative;
 					font-size: 1.3em;
+					font-weight: bold;
+					letter-spacing: 0;
 				}
 				span {
-					&::before {
-						content: url(./image/4m변경.svg);
-						fill: $color-green;
+					width: 80%;
+					display: inline-flex;
+					align-items: center;
+					padding: 0 15%;
+					color: $color-black01;
+					img {
+						margin-right: 30px;
+						max-width: 45px;
+						max-height: 45px;
+					}
+					b {
+						font-size: 2.3em;
+						font-weight: bolder;
 					}
 				}
 			}
 		}
 		.quick-menu-wrap {
 			width: 100%;
-			height: 65px;
+			height: 63px;
 			display: flex;
 			flex-wrap: nowrap;
 			margin-top: 2%;
@@ -393,6 +466,15 @@ $color-logo-orange: #eb6100;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				color: $color-black01;
+				&:nth-of-type(2n) {
+					background-color: $color-bg01;
+				}
+				img {
+					max-width: 35px;
+					max-height: 35px;
+					margin-right: 10px;
+				}
 			}
 		}
 	}

@@ -1,5 +1,7 @@
 header {
   position: fixed;
+  left: 0;
+  top: 0;
   z-index: 5;
   width: 100%;
   height: 100px;
@@ -14,8 +16,8 @@ header .header-container .logo-img {
   float: left;
   display: block;
   position: relative;
-  width: 220px;
-  height: 35.5px;
+  width: 200px;
+  height: 32.5px;
   margin: 20px 20px 10px;
 }
 header .header-container .logo-img::before {
@@ -42,32 +44,42 @@ header .header-container .logo-img img {
 }
 header .header-container .header-2f {
   position: relative;
+  width: calc(100% - 240px);
   height: 50%;
   display: flex;
+  justify-content: flex-end;
 }
 header .header-container .header-2f .quick-myjob {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 35px;
   letter-spacing: 0;
-  border: 1px solid #004098;
+  border: 1.5px solid #eb6100;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 header .header-container .header-2f .quick-myjob span {
-  font-size: 0.75em;
+  font-size: 0.8em;
   letter-spacing: 0;
+  font-weight: bold;
+  margin-right: 7px;
 }
 header .header-container .header-2f .quick-myjob .incompleted {
   letter-spacing: 0;
-  font-size: 0.7em;
+  font-size: 0.75em;
 }
 header .header-container .header-2f .quick-myjob .refer {
   letter-spacing: 0;
-  font-size: 0.7em;
+  font-size: 0.75em;
 }
 header .header-container .header-2f .gnb-wrap {
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
+  width: 20%;
   gap: 30px;
   margin-right: 20px;
 }
@@ -93,6 +105,7 @@ header .header-container .header-1f .main-gnb {
 }
 header .header-container .header-1f .main-gnb ul {
   display: flex;
+  align-items: center;
   border-radius: 3px;
 }
 header .header-container .header-1f .main-gnb ul li {
@@ -127,6 +140,25 @@ header .header-container .header-1f .main-gnb ul li a span {
   padding: 5px 10px;
   font-size: 0.95em;
   font-weight: bold;
+}
+header .header-container .header-1f .gnb-btn {
+  display: flex;
+  gap: 15px;
+}
+header .header-container .header-1f .gnb-btn li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+header .header-container .header-1f .gnb-btn li.arrow-left {
+  background: url(../image/arrow_left.png) no-repeat center/contain;
+}
+header .header-container .header-1f .gnb-btn li.arrow-right {
+  background: url(../image/arrow_right.png) no-repeat center/contain;
 }
 
 @media screen and (max-width: 1400px) {

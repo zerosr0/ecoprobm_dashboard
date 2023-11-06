@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./js/jquery.js"></script>
+
+</head>
+
+<body>
+  <div id="leftmenu">
+    <!--즐겨찾기, 방문기록 -->
+    <div class="favorite">
+      <ul class="level1">
+        <li class="level1-li">
+          <a href="#" class="">
+            <span class="icon_span">
+              <i class="fa fa-history"></i>
+            </span>
+            <span class="font_span">최근 방문기록</span>
+          </a>
+          <ul class="lastest-list-box" id="LatestList">
+            <li><a href="#">0. 최근 방문 기록이 없습니다.</a></li>
+            <li><a href="#">0. 최근 방문 기록이 없습니다.</a></li>
+          </ul>
+        </li>
+        <li class="level1-li">
+          <a href="#">
+            <span class="icon_span">
+              <i class="fa fa-bookmark" aria-hidden="true"></i>
+            </span>
+            <span class="font_span">즐겨찾는 페이지</span>
+          </a>
+          <ul class="bookmark-list-box" id="BookMarkList">
+            <li><a href="#">0. 즐겨찾기가 없습니다.</a></li>
+            <li><a href="#">0. 즐겨찾기가 없어요.</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="side-menu">
+      <li class="step01 myjob">
+        <a class="open">
+          <i class="fa-regular fa-square-plus"></i>
+          MYJOB
+        </a>
+        <ul class="step02">
+          <li class="step02">
+            <a>
+              <i class="fa fa-angle-right"></i>MYJOB 현황
+            </a>
+          </li>
+
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>내처리문서</a>
+          </li>
+
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>내참조문서</a>
+          </li>
+
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>내부서문서</a>
+          </li>
+
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>QBOX활용상태</a>
+          </li>
+        </ul>
+      </li>
+      <li class="step01 dev-request">
+        <a href="#">
+          <i class="fa-regular fa-square-plus"></i>
+          개발의뢰
+        </a>
+        <ul class="step02">
+          <li class="step02">
+            <a href="#">
+              제품정보관리
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              제품정보검색
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              ECR/O(4PEP)
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="step01 dev-quality">
+        <a href="#">
+          <i class="fa-regular fa-square-plus"></i>
+          개발품질
+        </a>
+        <ul class="step02">
+          <li class="step02">
+            <a href="#">
+              FAR 현황
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="step01 open-issue">
+        <a href="#">
+          <i class="fa-regular fa-square-plus"></i>
+          오픈이슈
+        </a>
+        <ul class="step02">
+          <li class="step02">
+            <a href="#">
+              CAR 현황
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="step01 past-quality">
+        <a href="#">
+          <i class="fa-regular fa-square-plus"></i>
+          과거품질
+        </a>
+        <ul class="step02">
+          <li class="step02">
+            <a href="#">
+              신규등록
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              과거차품질문제현황
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              신차반영현황
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="step01 change-manage">
+        <a href="#">
+          <i class="fa-regular fa-square-plus"></i>
+          변경관리
+        </a>
+        <ul class="step02">
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>
+              기초정보
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>
+              고객사클레임
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>
+              클레임분석현황
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              Supplier NCC
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="step01 review-manage">
+        <a href="#">
+          <i class="fa-regular fa-square-plus"></i>
+          심사관리
+        </a>
+        <ul class="step02">
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>
+              코드현황
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>
+              측정장비현황
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>
+              교정계획/실적
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="step01">
+        <a href="#">
+          <i class="fa-regular fa-square-plus"></i>
+          개발표준관리
+        </a>
+        <ul class="step02">
+          <li class="step02">
+            <a href="#">
+              시험의뢰서현황
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              시험진행종합현황
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              시험결과서
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              오픈이슈
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              시험규격현황
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              외주시험기관 관리
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              연간 정기 신뢰성시험
+            </a>
+          </li>
+          <li class="step02">
+            <a href="#">
+              <i class="fa-regular fa-square-plus"></i>
+              장비관리
+            </a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <div class="slide-btn">
+      <i class="fa-solid fa-caret-up"></i>
+    </div>
+
+    <div class="favorit">
+      <ul>
+        <li>즐겨찾기 추가</li>
+        <li>
+          <div class="inputWrap">
+            <label for="favorit">즐겨찿기명</label><input type="text" id="txtFTitle" name="txtFTitle" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+@charset "utf-8";
+$left-bg: #eff4fc;
+$menu-ch-bg: #dce4ee;
+$hover-font-color: #056ac9;
+$menu-hover-bg-color: #f7faff;
+$graph-bar-color: #b5bed7;
+$dark-navy: #023562;
+$menu-text-color: #5a5d60;
+$th-color: #cfddee;
+$color-logo-light-blue: #008bd6;
+$color-logo-dark-blue: #004098;
+$color-logo-orange: #eb6100;
+
+#leftmenu {
+	position: fixed;
+	width: 210px;
+	height: 100vh;
+	top: 100px;
+	left: -100%;
+	z-index: 4;
+	background-color: $left-bg;
+	transition: 1s;
+	.favorite {
+		position: relative;
+		.level1 {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			background-color: $left-bg;
+			.level1-li {
+				.lastest-list-box,
+				.bookmark-list-box {
+					position: absolute;
+					left: -100%;
+				}
+				&:hover .lastest-list-box,
+				&:hover .bookmark-list-box {
+					left: 100%;
+					margin-top: -36px;
+					font-size: 1em;
+					word-break: break-all;
+					z-index: 9;
+				}
+				ul li a {
+					background-color: $menu-ch-bg;
+					padding-left: 20px;
+					color: $menu-text-color;
+				}
+				a {
+					display: block;
+					width: 210px;
+					//color: #44484f;
+					line-height: 36px;
+					height: 36px;
+					.icon_span {
+						margin-left: 20px;
+						color: $menu-text-color;
+						font-size: 1.2em;
+						vertical-align: middle;
+					}
+					.font_span {
+						margin-left: 10px;
+						color: $menu-text-color;
+						vertical-align: middle;
+						font-size: 0.9em;
+						font-weight: bold;
+					}
+					&:hover {
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.side-menu {
+		width: 100%;
+		position: absolute;
+		top: 72px;
+		li.step01 {
+			font-size: 1em;
+			> a {
+				display: block;
+				background-color: $left-bg;
+				color: #44484f;
+				padding: 8px 5px 8px 20px;
+				word-break: break-all;
+				font-weight: bold;
+				i {
+					margin-right: 5px;
+				}
+				&:hover {
+					background-color: #fff;
+					font-weight: bold;
+				}
+				&.open {
+					background-color: rgb(0, 0, 128) !important;
+					color: #fff;
+					font-weight: bold;
+				}
+			}
+		}
+		ul.step02 {
+			li.step02 {
+				> a {
+					padding: 8.5px 5px 8.5px 40px;
+					i {
+						margin-right: 5px;
+					}
+					&:hover {
+						background-color: #fff;
+					}
+					&.open2 {
+						color: $hover-font-color;
+						background-color: $menu-ch-bg !important;
+					}
+				}
+			}
+			ul.step03 {
+				li {
+					a {
+						display: block;
+						color: #5a5d60;
+						background-color: #fff;
+						padding: 7px 5px 7px 55px;
+						font-size: 13px;
+						i {
+							margin-right: 5px;
+						}
+						&:hover {
+							background-color: #fff;
+						}
+						&.open3 {
+							display: block;
+							color: $hover-font-color;
+							font-size: 13px;
+						}
+						ul li a {
+							padding: 7px 5px 7px 55px;
+							i {
+								margin-right: 5px;
+							}
+							&.open4 {
+								display: block;
+								color: #f2f2f2;
+								background-color: #1b73bb;
+								font-size: 13px;
+							}
+							&:hover {
+								background-color: #eff4fc;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.slide-btn {
+		position: absolute;
+		left: 100%;
+		top: 30%;
+		background-color: $graph-bar-color;
+		width: 15px;
+		height: 60px;
+		border-radius: 0 5px 5px 0;
+		z-index: 4;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: 0.2s;
+		&:hover {
+			background-color: $color-logo-dark-blue;
+		}
+		.fa-caret-up {
+			font-size: 15px;
+			color: #fff;
+			transform: rotate(270deg);
+		}
+	}
+}
+
+/* 메뉴 전체 스타일 */
+.side-menu li ul {
+	display: none;
+	font-size: 13px;
+	li a {
+		display: block;
+		font-weight: bold;
+		background-color: $left-bg;
+		color: $menu-text-color;
+		padding: 7px 5px 7px 40px;
+	}
+}
+
+/* 즐겨찾기 Layout */
+.favorit {
+	width: 400px;
+	border: 1px solid #d2d5d8;
+	position: absolute;
+	left: 500px;
+	top: 250px;
+	display: none;
+	z-index: 6;
+}
+
+/* 어떤 요소인지 확인 */
+.backDiv {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	filter: Alpha(opacity=60);
+	opacity: 0.6;
+	background: #000;
+	z-index: 100;
+}
+
+.favorit ul li {
+	background-color: #fff;
+	padding: 20px;
+	&:first-child {
+		border-top: 3px solid #f29b12;
+		background-color: #fff;
+		font-weight: bold;
+		padding: 10px 20px;
+		border-bottom: 1px solid #d2d5d8;
+	}
+}
+
+.favorit input {
+	width: 275px;
+	height: 30px;
+	margin-left: 10px;
+	background-color: #f7f7f7;
+}
+.favorit .btnFavoritWrap {
+	width: 334px;
+	margin-top: 10px;
+	text-align: right;
+}
+
+@media screen and (max-width: 1250px) {
+	.leftmenu {
+		top: 150px;
+	}
+}

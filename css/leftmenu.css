@@ -1,0 +1,227 @@
+@charset "UTF-8";
+#leftmenu {
+  position: fixed;
+  width: 210px;
+  height: 100vh;
+  top: 100px;
+  left: -100%;
+  z-index: 4;
+  background-color: #eff4fc;
+  transition: 1s;
+}
+#leftmenu .favorite {
+  position: relative;
+}
+#leftmenu .favorite .level1 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #eff4fc;
+}
+#leftmenu .favorite .level1 .level1-li .lastest-list-box,
+#leftmenu .favorite .level1 .level1-li .bookmark-list-box {
+  position: absolute;
+  left: -100%;
+}
+#leftmenu .favorite .level1 .level1-li:hover .lastest-list-box, #leftmenu .favorite .level1 .level1-li:hover .bookmark-list-box {
+  left: 100%;
+  margin-top: -36px;
+  font-size: 1em;
+  word-break: break-all;
+  z-index: 9;
+}
+#leftmenu .favorite .level1 .level1-li ul li a {
+  background-color: #dce4ee;
+  padding-left: 20px;
+  color: #5a5d60;
+}
+#leftmenu .favorite .level1 .level1-li a {
+  display: block;
+  width: 210px;
+  line-height: 36px;
+  height: 36px;
+}
+#leftmenu .favorite .level1 .level1-li a .icon_span {
+  margin-left: 20px;
+  color: #5a5d60;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+#leftmenu .favorite .level1 .level1-li a .font_span {
+  margin-left: 10px;
+  color: #5a5d60;
+  vertical-align: middle;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+#leftmenu .favorite .level1 .level1-li a:hover {
+  background-color: #fff;
+}
+#leftmenu .side-menu {
+  width: 100%;
+  position: absolute;
+  top: 72px;
+}
+#leftmenu .side-menu li.step01 {
+  font-size: 1em;
+}
+#leftmenu .side-menu li.step01 > a {
+  display: block;
+  background-color: #eff4fc;
+  color: #44484f;
+  padding: 8px 5px 8px 20px;
+  word-break: break-all;
+  font-weight: bold;
+}
+#leftmenu .side-menu li.step01 > a i {
+  margin-right: 5px;
+}
+#leftmenu .side-menu li.step01 > a:hover {
+  background-color: #fff;
+  font-weight: bold;
+}
+#leftmenu .side-menu li.step01 > a.open {
+  background-color: rgb(0, 0, 128) !important;
+  color: #fff;
+  font-weight: bold;
+}
+#leftmenu .side-menu ul.step02 li.step02 > a {
+  padding: 8.5px 5px 8.5px 40px;
+}
+#leftmenu .side-menu ul.step02 li.step02 > a i {
+  margin-right: 5px;
+}
+#leftmenu .side-menu ul.step02 li.step02 > a:hover {
+  background-color: #fff;
+}
+#leftmenu .side-menu ul.step02 li.step02 > a.open2 {
+  color: #056ac9;
+  background-color: #dce4ee !important;
+}
+#leftmenu .side-menu ul.step02 ul.step03 li a {
+  display: block;
+  color: #5a5d60;
+  background-color: #fff;
+  padding: 7px 5px 7px 55px;
+  font-size: 13px;
+}
+#leftmenu .side-menu ul.step02 ul.step03 li a i {
+  margin-right: 5px;
+}
+#leftmenu .side-menu ul.step02 ul.step03 li a:hover {
+  background-color: #fff;
+}
+#leftmenu .side-menu ul.step02 ul.step03 li a.open3 {
+  display: block;
+  color: #056ac9;
+  font-size: 13px;
+}
+#leftmenu .side-menu ul.step02 ul.step03 li a ul li a {
+  padding: 7px 5px 7px 55px;
+}
+#leftmenu .side-menu ul.step02 ul.step03 li a ul li a i {
+  margin-right: 5px;
+}
+#leftmenu .side-menu ul.step02 ul.step03 li a ul li a.open4 {
+  display: block;
+  color: #f2f2f2;
+  background-color: #1b73bb;
+  font-size: 13px;
+}
+#leftmenu .side-menu ul.step02 ul.step03 li a ul li a:hover {
+  background-color: #eff4fc;
+}
+#leftmenu .slide-btn {
+  position: absolute;
+  left: 100%;
+  top: 30%;
+  background-color: #b5bed7;
+  width: 15px;
+  height: 60px;
+  border-radius: 0 5px 5px 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#leftmenu .slide-btn:hover {
+  background-color: #004098;
+}
+#leftmenu .slide-btn .fa-caret-up {
+  font-size: 15px;
+  color: #fff;
+  transform: rotate(270deg);
+}
+
+/* 메뉴 전체 스타일 */
+.side-menu li ul {
+  display: none;
+  font-size: 13px;
+}
+.side-menu li ul li a {
+  display: block;
+  font-weight: bold;
+  background-color: #eff4fc;
+  color: #5a5d60;
+  padding: 7px 5px 7px 40px;
+}
+
+/* 즐겨찾기 Layout */
+.favorit {
+  width: 400px;
+  border: 1px solid #d2d5d8;
+  position: absolute;
+  left: 500px;
+  top: 250px;
+  display: none;
+  z-index: 6;
+}
+
+/* 어떤 요소인지 확인 */
+.backDiv {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  filter: Alpha(opacity=60);
+  opacity: 0.6;
+  background: #000;
+  z-index: 100;
+}
+
+.favorit ul li {
+  background-color: #fff;
+  padding: 20px;
+}
+.favorit ul li:first-child {
+  border-top: 3px solid #f29b12;
+  background-color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-bottom: 1px solid #d2d5d8;
+}
+
+.favorit input {
+  width: 275px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #f7f7f7;
+}
+
+.favorit .btnFavoritWrap {
+  width: 334px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1250px) {
+  .leftmenu {
+    top: 150px;
+  }
+}
+
+/*# sourceMappingURL=leftmenu.css.map */

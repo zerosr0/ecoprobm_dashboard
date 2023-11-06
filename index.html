@@ -6,18 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/myjob.css">
   <link rel="stylesheet" href="./css/topmenu.css">
-  <script defer src="./js/main.js"></script>
-  <script src="./js/import.js"></script>
+  <link rel="stylesheet" href="./css/leftmenu.css">
+
   <title>::: 에코프로비엠 포털 :::</title>
 
   <!-- Jquery CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="./js/import.js"></script>
+  <script src="./js/jquery.js"></script>
+  <script defer src="./js/main.js"></script>
+
 </head>
 
 <body>
   <header id='header'></header>
   <div class="container">
+    <div id="leftmenu"></div>
     <div class="form-wrap">
       <ul role="tablist"
         class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header ui-sortable">
@@ -50,7 +54,7 @@
                     </td>
                     <td class="processing-status">
                       <span class="current-status">문제점승인</span>
-                      <a href="#">23.07.05 운영자</a>
+                      <a href="#">23.11.05 운영자</a>
                     </td>
                   </tr>
                   <tr>
@@ -60,7 +64,7 @@
                     </td>
                     <td class="processing-status">
                       <span class="current-status">문제점승인</span>
-                      <a href="#">23.07.04 운영자</a>
+                      <a href="#">23.11.04 운영자</a>
                     </td>
                   </tr>
                   <tr>
@@ -70,7 +74,7 @@
                     </td>
                     <td class="processing-status">
                       <span class="current-status">실적문서승인</span>
-                      <a href="#">23.07.03 운영자</a>
+                      <a href="#">23.11.01 운영자</a>
                     </td>
                   </tr>
                   <tr>
@@ -80,7 +84,7 @@
                     </td>
                     <td class="processing-status">
                       <span class="current-status">처리결과확인</span>
-                      <a href="#">23.07.03 운영자</a>
+                      <a href="#">23.10.23 운영자</a>
                     </td>
                   </tr>
                   <tr>
@@ -90,7 +94,7 @@
                     </td>
                     <td class="processing-status">
                       <span class="current-status">실적문서승인</span>
-                      <a href="#">23.07.03 운영자</a>
+                      <a href="#">23.10.03 운영자</a>
                     </td>
                   </tr>
                 </tbody>
@@ -114,8 +118,9 @@
               <a class="unpro-doc-btn" href=""><span>Q-Cost</span>14</a>
               <a class="unpro-doc-btn" href=""><span>과거차품질</span>84</a>
               <a class="unpro-doc-btn" href=""><span>정기검사</span>6</a>
-              <a class="unpro-doc-btn" href=""><span>자격<br>인증관리</span>835</a>
+              <a class="unpro-doc-btn" href=""><span>자격인증관리</span>835</a>
               <a class="unpro-doc-btn" href=""><span>고객품질</span>835</a>
+              <div class="unpro-doc-btn" href="#"><img src="./image/업무별미처리문서.svg" alt=""></div>
             </div>
           </section>
           <section class="notice">
@@ -134,16 +139,16 @@
                           d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
                       </svg>공지사항 테스트
                     </td>
-                    <td>2023-11-17</td>
+                    <td>2023.11.17</td>
                   </tr>
                   <tr onclick="location.href='#'">
                     <td>GQMS 추진경과보고</td>
-                    <td>2023-11-14</td>
+                    <td>2023.11.14</td>
 
                   </tr>
                   <tr onclick="location.href='#'">
                     <td>QMS에 파일 첨부가 안되는 경우 해결 방법</td>
-                    <td>2023-11-13</td>
+                    <td>2023.11.13</td>
                   </tr>
                   <tr onclick="location.href='#'">
                     <td></td>
@@ -170,6 +175,7 @@
           <section class="current-quan">
             <p class="section-title"><img src="image/title_icon.png" alt="">
               <span>품질현황</span>
+              <b class="unit">(단위: 건수/%)</b>
               <a href="#" class="more-btn">more</a>
             </p>
             <div class="current-quan-tab">
@@ -217,49 +223,49 @@
             <div class="wrapper">
               <div class="dashboard-menu-wrap">
                 <a href="" class="dashboard-menu">
-                  <p>설계 변경</p>
-                  <span><b class="quan-dashboard-num">0</b>건</span>
+                  <p>고객품질</p>
+                  <span><img src="./image/고객품질.svg" alt=""><b>0</b>건</span>
                 </a>
                 <a href="" class="dashboard-menu">
-                  <p>설계 변경</p>
-                  <span><b class="quan-dashboard-num">0</b>건</span>
+                  <p>과거품질</p>
+                  <span><img src="./image/과거품질.svg" alt=""><b>0</b>건</span>
                 </a>
                 <a href="" class="dashboard-menu">
-                  <p>설계 변경</p>
-                  <span><b class="quan-dashboard-num">0</b>건</span>
+                  <p>개선관리</p>
+                  <span><img src="./image/개선관리.svg" alt=""><b>0</b>건</span>
                 </a>
                 <a href="" class="dashboard-menu">
-                  <p>설계 변경</p>
-                  <span><b class="quan-dashboard-num">0</b>건</span>
+                  <p>심사관리</p>
+                  <span><img src="./image/심사관리.svg" alt=""><b>0</b>건</span>
                 </a>
                 <a href="" class="dashboard-menu">
-                  <p>설계 변경</p>
-                  <span><b class="quan-dashboard-num">0</b>건</span>
+                  <p>변경관리</p>
+                  <span><img src="./image/변경관리.svg" alt=""><b>0</b>건</span>
                 </a>
                 <a href="" class="dashboard-menu">
-                  <p>설계 변경</p>
-                  <span><b class="quan-dashboard-num">0</b>건</span>
+                  <p>표준관리</p>
+                  <span><img src="./image/표준관리.svg" alt=""><b>0</b>건</span>
                 </a>
                 <a href="" class="dashboard-menu">
-                  <p>설계 변경</p>
-                  <span><b class="quan-dashboard-num">0</b>건</span>
+                  <p>계측기관리</p>
+                  <span><img src="./image/계측기관리.svg" alt=""><b>0</b>건</span>
                 </a>
                 <a href="" class="dashboard-menu">
-                  <p>설계 변경</p>
-                  <span><b class="quan-dashboard-num">0</b>건</span>
+                  <p>특성평가</p>
+                  <span><img src="./image/특성평가.svg" alt=""><b>0</b>건</span>
                 </a>
               </div>
               <div class="quick-menu-wrap">
                 <a href="" class="quick-menu">
-                  <img src="" alt="">QMS매뉴얼</a>
+                  <img src="./image/매뉴얼.svg" alt="">QMS매뉴얼</a>
                 <a href="" class="quick-menu">
-                  <img src="" alt="">장애처리게시판</a>
+                  <img src="./image/장애처리게시판.svg" alt="">장애처리게시판</a>
                 <a href="" class="quick-menu">
-                  <img src="" alt="">Q&A게시판</a>
+                  <img src="./image/qna게시판.svg" alt="">Q&A게시판</a>
                 <a href="" class="quick-menu">
-                  <img src="" alt="">회의록/품질회의</a>
+                  <img src="./image/회의록.svg" alt="">회의록/품질회의</a>
                 <a href="" class="quick-menu">
-                  <img src="" alt="">공식홈페이지</a>
+                  <img src="./image/홈페이지.svg" alt="">공식홈페이지</a>
               </div>
             </div>
           </section>
